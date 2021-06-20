@@ -1,0 +1,486 @@
+// NO CAMBIAR COMIENZA
+@import "typography";
+@import "icons";
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// NO CAMBIAR TERMINA
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "BYUI Open Sans";
+}
+
+header {
+  background-color: $byui-blue;
+  height: 60px;
+}
+
+.icon-byui-logo {
+  display: flex;
+  width: 86px;
+  content: "\e90d";
+  text-decoration: none;
+  color: white;
+  background-color: $body-font;
+  font-size: 1.9em;
+  padding: 0.5em;
+}
+
+.site-banner {
+  display: flex;
+  justify-content: space-between;
+
+  &__left a {
+    text-decoration: none;
+  }
+}
+
+.site-banner__right {
+  height: 60px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+  }
+}
+
+form {
+  display: none;
+}
+
+.covid-info-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 0px;
+}
+
+.main-container {
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.univ-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  background-color: $light-gray;
+  color: $body-font;
+  height: 58px;
+  border-bottom: 1px solid $body-font;
+
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 300;
+  }
+}
+
+.covid-info {
+  padding: 20px;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0px;
+  height: 114px;
+  background: black;
+
+  order: 1;
+}
+
+.covid-info-text {
+  color: $light-gray;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.covid-info-btn {
+  background-color: $byui-blue;
+  height: 35px;
+  width: 191px;
+  font-size: 14px;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.call-to-action {
+  order: 2;
+
+  img {
+    margin: 8px 0px;
+  }
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0px;
+}
+
+.section {
+  order: 3;
+}
+
+.section-indv {
+  margin: 29px 0px 0px 0px;
+
+  a {
+    text-decoration: none;
+
+    p {
+      font-size: 15px;
+      color: $link-blue;
+    }
+  }
+}
+
+.section-indv p {
+  height: 36px;
+  margin: -5px 0px 0px 0px;
+  font-size: 17px;
+  padding: 0px 0px 0px 10px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+}
+
+.resources {
+  order: 5;
+  margin-bottom: 36px;
+
+  span {
+    display: block;
+    background-color: $dark-gray;
+    font-size: 22px;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  p {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: $light-gray;
+    margin: 0;
+    border-left: 1px solid $med-gray;
+    border-right: 1px solid $med-gray;
+    border-bottom: 1px solid $med-gray;
+
+    a {
+      color: $link-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  order: 6;
+  margin-bottom: 36px;
+}
+
+.get-info {
+  height: 39px;
+  background: lightgrey;
+  width: 100%;
+  color: black;
+  border: 1px solid gray;
+  margin: 36px 0;
+  border-radius: 4px;
+
+  order: 4;
+
+  button {
+    border: 1px solid #b4b3b5;
+    display: block;
+    padding: 10px 18px;
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.dates-heading {
+  padding: 10px 20px;
+  font-size: 1.5em;
+
+  width: 100%;
+  color: white;
+  background-color: $link-blue;
+}
+
+.dates-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+
+  a {
+    width: 100%;
+    display: flex;
+    padding: 8px 20px;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.date {
+  font-weight: 600;
+  flex: 0.3;
+}
+
+.descr {
+  flex: 0.6;
+}
+
+.calendar {
+  order: 7;
+}
+
+.calendar-section {
+  padding: 25px 0;
+  border-top: 1px solid #b4b3b5;
+}
+
+.devotional {
+  border: 1px solid gainsboro;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  order: 8;
+}
+
+.dev-info-title {
+  font-size: 16px;
+  color: $link-blue;
+
+  padding: 0px 20px;
+  padding-top: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dev-info-desc {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.devotional-btn {
+  color: white;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 10px 24px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: $link-blue;
+  font-size: 13px;
+}
+
+.cal-txt-date {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.cal-txt-title {
+  margin-top: 18px;
+  margin-bottom: 12px;
+
+  a {
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: $link-blue;
+  }
+}
+
+.cal-txt-desc {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.calendar-thumbnail {
+  img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .site-banner {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .univ-name {
+    justify-content: flex-start;
+
+    a {
+      margin: 0 auto;
+      width: 948px;
+      font-size: 30px;
+    }
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0 30px;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .covid-info,
+  .call-to-action,
+  .section,
+  .calendar {
+    grid-column: 1/2;
+  }
+
+  .get-info,
+  .resources,
+  .dates,
+  .devotional {
+    grid-column: 2/3;
+  }
+
+  .covid-info {
+    flex-direction: row;
+
+    div {
+      font-size: 32px;
+    }
+
+    button {
+      height: 100%;
+      width: 120px;
+    }
+  }
+
+  .get-info {
+    grid-row: 1/2;
+    margin: 25px 0;
+  }
+
+  .resources {
+    grid-row: 1/3;
+    align-self: center;
+    margin-top: 50px;
+  }
+
+  .call-to-action img {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+
+  .section-indv {
+    margin: 0;
+  }
+
+  .devotional {
+    justify-content: unset;
+    border: none;
+  }
+
+  .dev-img {
+    height: 175px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .dev-info {
+    border: 1px solid $med-gray;
+  }
+
+  .devotional-btn {
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
